@@ -4,18 +4,21 @@ import MainPage from './components/MainPage/MainPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import LoginPage from './components/LoginPage/LoginPage';
+import RegisterPage from './components/RegisterPage/RegisterPage';
 
 function App() {
 
   return (
     <>
-        <Navbar/>
+        <Navbar/> 
         <Routes>
-          {/* the final code will not pass the products to every page, but each page will call the server API */}
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<RegisterPage />} />
           <Route path="/" element={<MainPage />} />
           <Route path="/app" element={<MainPage />} />
         </Routes>
-        </>
+        </> 
   );
 }
 
