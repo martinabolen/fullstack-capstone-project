@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
+import Profile from './components/Profile/Profile';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<RegisterPage />} />
           <Route path="/" element={<MainPage />} />
           <Route path="/app" element={<MainPage />} />
+          <Route path="/app/profile" element={<Profile/>} />
         </Routes>
         </> 
   );
