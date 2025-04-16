@@ -41,10 +41,11 @@ app.use((err, req, res, next) => {
     res.status(500).send('Internal Server Error');
 });
 
-app.get("/",(req,res)=>{
-    res.send("Inside the server")
-})
+app.get("/", (req, res) => {
+    res.send("Inside the server");
+});
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-}); 
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+});
