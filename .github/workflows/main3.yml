@@ -26,7 +26,7 @@ jobs:
       - name: Run Linter
         run: |
           # This command finds all JavaScript files recursively and runs JSHint on them
-          jshint ./giftlink-backend/**/*.js
+          jshint giftlink-backend/**/*.js
           echo "Linted all the js files successfully"
 
   client_build:
