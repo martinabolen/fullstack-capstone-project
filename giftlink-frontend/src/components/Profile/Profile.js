@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
       setTimeout(() => {
         setChanged("");
         navigate("/");
-      }, 1000); 
+      }, 1000);
 
     } else {
       // Handle error case
