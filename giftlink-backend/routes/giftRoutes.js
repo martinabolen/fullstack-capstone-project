@@ -4,7 +4,7 @@ const connectToDatabase = require('../models/db');
 const logger = require('../logger');
 
 // Get all gifts
-router.get('/', async (req, res, next) => { 
+router.get('/', async (req, res, next) => {
     logger.info('/ called');
     try {
         const db = await connectToDatabase();
@@ -13,10 +13,10 @@ router.get('/', async (req, res, next) => {
         const gifts = await collection.find({}).toArray();
         res.json(gifts);
     } catch (e) {
-        logger.console.error('oops something went wrong', e);
+        logger.console.error('oops something went wrong', e)
         next(e);
     }
-}); 
+});
 
 // Get a single gift by ID
 router.get('/:id', async (req, res, next) => {
