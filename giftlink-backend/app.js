@@ -17,6 +17,11 @@ connectToDatabase().then(() => {
 })
     .catch((e) => console.error('Failed to connect to DB', e));
 
+app.use((req, res, next) => {
+    res.setHeader("Content-Security-Policy", "default-src 'self'; img-src 'self' data: https://example.com; script-src 'self'; style-src 'self' 'unsafe-inline';");
+    next();
+});
+
 
 app.use(express.json());
 
